@@ -5,171 +5,180 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amna Bin Nashi</title>
 
-<style>
-* {margin:0;padding:0;box-sizing:border-box;}
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: #ffffff;
-  color: #111;
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* HERO */
-.hero {
-  height: 260px;
-  background: linear-gradient(135deg, #6a5acd, #8a7cff);
+body {
+  background: #f8f5f0;
+  color: #333;
+}
+
+/* HEADER */
+.header {
+  height: 220px;
+  background: linear-gradient(135deg, #d8c3a5, #eae0d5);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 /* PROFILE */
 .profile {
   text-align: center;
-  margin-top: -60px;
+  margin-top: -70px;
 }
 
-.avatar {
-  width: 110px;
-  height: 110px;
-  background: white;
+.profile img {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  margin: auto;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:32px;
-  font-weight:bold;
-  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  border: 6px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-h1 {margin-top:12px;}
+h1 {
+  margin-top: 15px;
+  font-size: 24px;
+}
 
-.bio {
-  color:#666;
-  margin-top:5px;
+.title {
+  color: #777;
+  margin-top: 5px;
+  font-size: 14px;
 }
 
 /* BUTTONS */
+.buttons {
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
 .btn {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  background:#f5f5f5;
-  padding:14px;
-  margin:10px auto;
-  border-radius:14px;
-  text-decoration:none;
-  color:#111;
-  width:85%;
-  max-width:340px;
-  transition:0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #e6d3b3;
+  color: #333;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn i {
+  font-size: 18px;
 }
 
 .btn:hover {
-  background:#6a5acd;
-  color:white;
+  background: #d6bfa3;
 }
 
-/* ICON */
-.icon {
-  width:20px;
-  height:20px;
-}
-
-/* SECTIONS */
+/* SECTION */
 .section {
-  padding:25px;
-  max-width:550px;
-  margin:auto;
+  padding: 25px;
 }
 
+.section h2 {
+  margin-bottom: 15px;
+}
+
+/* CARD */
 .card {
-  background:#fafafa;
-  padding:16px;
-  margin:12px 0;
-  border-radius:14px;
-  border-left:4px solid #6a5acd;
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.card span {
-  color:#777;
-  font-size:14px;
+.card small {
+  color: #888;
 }
 
 /* FOOTER */
 footer {
-  text-align:center;
-  padding:25px;
-  color:#aaa;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
 }
 </style>
-
 </head>
+
 <body>
 
-<div class="hero"></div>
+<div class="header"></div>
 
 <div class="profile">
-  <div class="avatar">A</div>
-
+  <!-- غيري الرابط تحت وحطي صورتك -->
+  <img src="https://i.imgur.com/yourimage.jpg" alt="profile">
+  
   <h1>Amna Bin Nashi</h1>
-
-  <div class="bio">
+  <div class="title">
     Software Engineer | Front-End | UI/UX | AI/ML
   </div>
+</div>
 
-  <!-- BUTTONS -->
-  <a href="mailto:amnabinnashi@gmail.com" class="btn">
-    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/732/732200.png">
-    Email
+<div class="buttons">
+  <a href="mailto:your@email.com" class="btn">
+    <i class="fa-solid fa-envelope"></i> Email
   </a>
 
-  <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3" target="_blank" class="btn">
-    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174857.png">
-    LinkedIn
+  <a href="https://linkedin.com" class="btn">
+    <i class="fa-brands fa-linkedin"></i> LinkedIn
   </a>
 
-  <a href="https://github.com/amnabinnashi" target="_blank" class="btn">
-    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/733/733553.png">
-    GitHub
+  <a href="https://github.com" class="btn">
+    <i class="fa-brands fa-github"></i> GitHub
   </a>
 </div>
 
-<!-- EXPERIENCE -->
 <div class="section">
   <h2>Experience</h2>
 
   <div class="card">
-    <strong>Product Designer & Developer</strong><br>
-    <span>Nexa Solutions (2026 - Present)</span>
+    <b>Product Designer & Developer</b><br>
+    <small>Nexa Solutions (2026 - Present)</small>
   </div>
 
   <div class="card">
-    <strong>UI/UX Designer</strong><br>
-    <span>Freelance (2024 - 2026)</span>
+    <b>UI/UX Designer</b><br>
+    <small>Freelance (2024 - 2026)</small>
   </div>
 
   <div class="card">
-    <strong>Graphic Designer & Social Media Manager</strong><br>
-    <span>Dhifaf Al-Nile (2024)</span>
+    <b>Graphic Designer & Social Media Manager</b><br>
+    <small>Dhifaf Al-Nile Company (2024)</small>
   </div>
 </div>
 
-<!-- EDUCATION -->
 <div class="section">
   <h2>Education</h2>
 
   <div class="card">
-    <strong>Bachelor of Computer Science</strong><br>
-    <span>Hadhramout University (2019 - 2023)</span>
+    <b>Bachelor of Computer Science</b><br>
+    <small>Hadhramout University (2019 - 2023)</small>
   </div>
 </div>
 
-<!-- CERTIFICATIONS -->
 <div class="section">
   <h2>Certifications</h2>
 
-  <div class="card">AWS Cloud Practitioner Essentials</div>
   <div class="card">AWS Cloud Essentials</div>
+  <div class="card">AWS Cloud Practitioner</div>
   <div class="card">Datadog APM Metrics</div>
 </div>
 
