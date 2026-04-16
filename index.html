@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amna Bin Nashi</title>
 
-<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -13,105 +13,109 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #f8f5f0;
-  color: #2d2d2d;
+  background: #f6f1e9;
+  color: #2d2a26;
 }
 
-/* Header */
+/* HEADER */
 .header {
   height: 220px;
-  background: linear-gradient(135deg, #d6c1a3, #bfa27a);
-  position: relative;
+  background: linear-gradient(135deg, #d6c3a3, #b89b72);
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
-/* Profile Image */
-.profile-img {
-  width: 110px;
-  height: 110px;
+/* PROFILE */
+.profile {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  background: #e9dfcf;
   border-radius: 50%;
-  border: 5px solid #f8f5f0;
-  position: absolute;
-  bottom: -55px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: url('https://i.pravatar.cc/300') center/cover;
-}
-
-/* Main */
-.container {
-  padding: 70px 20px 30px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 26px;
-  margin-bottom: 5px;
-}
-
-.role {
-  color: #7a6a58;
-  margin-bottom: 20px;
-  font-size: 14px;
-}
-
-/* Buttons */
-.btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  width: 90%;
-  max-width: 350px;
-  margin: 10px auto;
+  font-size: 42px;
+  font-weight: bold;
+  color: #7a5c3e;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* NAME */
+.name {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.name h1 {
+  font-size: 26px;
+}
+
+.name p {
+  font-size: 14px;
+  color: #7a6b5a;
+}
+
+/* BUTTONS */
+.buttons {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
   padding: 14px;
-  border-radius: 12px;
+  border-radius: 14px;
   text-decoration: none;
-  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .email {
-  background: #bfa27a;
+  background: #b89b72;
   color: white;
 }
 
-.linkedin {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  color: #333;
-}
-
-.github {
-  background: #ffffff;
-  border: 1px solid #ddd;
-  color: #333;
+.linkedin, .github {
+  background: #e9dfcf;
+  color: #2d2a26;
 }
 
 .btn:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* Section */
+/* SECTIONS */
 .section {
-  margin-top: 30px;
-  text-align: left;
+  margin: 25px;
 }
 
 .section h2 {
   margin-bottom: 15px;
 }
 
-/* Card */
+/* CARDS */
 .card {
-  background: #fff;
+  background: white;
   padding: 15px;
-  border-radius: 12px;
+  border-radius: 15px;
   margin-bottom: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+  border-left: 5px solid #b89b72;
 }
 
 .card h3 {
@@ -120,82 +124,88 @@ h1 {
 
 .card p {
   font-size: 13px;
-  color: #777;
+  color: #666;
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
   text-align: center;
-  margin-top: 30px;
+  padding: 20px;
   font-size: 12px;
-  color: #999;
+  color: #888;
 }
 </style>
 </head>
 
 <body>
 
-<div class="header">
-  <div class="profile-img"></div>
+<div class="header"></div>
+
+<div class="profile">
+  <div class="avatar">A</div>
 </div>
 
-<div class="container">
+<div class="name">
   <h1>Amna Bin Nashi</h1>
-  <div class="role">Software Engineer | Front-End | UI/UX | AI/ML</div>
+  <p>Software Engineer | Front-End | UI/UX | AI/ML</p>
+</div>
 
-  <!-- BUTTONS (عدلي الروابط هنا لو تبغي) -->
-  <a href="mailto:your@email.com" class="btn email">
+<div class="buttons">
+
+  <!-- EMAIL -->
+  <a href="mailto:amnabinnashi2000@gmail.com" class="btn email">
     <i class="fa-solid fa-envelope"></i> Email
   </a>
 
-  <a href="https://www.linkedin.com/" class="btn linkedin" target="_blank">
+  <!-- LINKEDIN -->
+  <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3" target="_blank" class="btn linkedin">
     <i class="fa-brands fa-linkedin"></i> LinkedIn
   </a>
 
-  <a href="https://github.com/amna" class="btn github" target="_blank">
+  <!-- GITHUB -->
+  <a href="https://github.com/amnabinnashi" target="_blank" class="btn github">
     <i class="fa-brands fa-github"></i> GitHub
   </a>
 
-  <!-- EXPERIENCE -->
-  <div class="section">
-    <h2>Experience</h2>
+</div>
 
-    <div class="card">
-      <h3>Product Designer & Developer</h3>
-      <p>Nexa Solutions (2026 - Present)</p>
-    </div>
+<div class="section">
+  <h2>Experience</h2>
 
-    <div class="card">
-      <h3>UI/UX Designer</h3>
-      <p>Freelance (2024 - 2026)</p>
-    </div>
-
-    <div class="card">
-      <h3>Graphic Designer & Social Media Manager</h3>
-      <p>Dhifaf Al-Nile Company (2024)</p>
-    </div>
+  <div class="card">
+    <h3>Product Designer & Developer</h3>
+    <p>Nexa Solutions (2026 - Present)</p>
   </div>
 
-  <!-- CERTIFICATIONS -->
-  <div class="section">
-    <h2>Certifications</h2>
-
-    <div class="card">
-      <h3>AWS Cloud Practitioner Essentials</h3>
-    </div>
-
-    <div class="card">
-      <h3>AWS Knowledge: Cloud Essentials</h3>
-    </div>
-
-    <div class="card">
-      <h3>Datadog APM Metrics & Traces</h3>
-    </div>
+  <div class="card">
+    <h3>UI/UX Designer</h3>
+    <p>Freelance (2024 - 2026)</p>
   </div>
 
-  <div class="footer">
-    © 2026 Amna Bin Nashi
+  <div class="card">
+    <h3>Graphic Designer & Social Media Manager</h3>
+    <p>Dhifaf Al-Nile Company (2024)</p>
   </div>
+</div>
+
+<div class="section">
+  <h2>Certifications</h2>
+
+  <div class="card">
+    <h3>AWS Cloud Practitioner Essentials</h3>
+  </div>
+
+  <div class="card">
+    <h3>AWS Cloud Essentials</h3>
+  </div>
+
+  <div class="card">
+    <h3>Datadog APM Metrics & Traces</h3>
+  </div>
+</div>
+
+<div class="footer">
+  © 2026 Amna Bin Nashi
 </div>
 
 </body>
