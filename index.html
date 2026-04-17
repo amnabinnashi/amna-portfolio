@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amna Bin Nashi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -17,73 +17,64 @@
 }
 
 body {
-  background: #f6f1e9;
-  color: #2d2a26;
-}
-
-/* HEADER (تم تصغيره) */
-.header {
-  height: 140px;
-  background: linear-gradient(135deg, #d6c3a3, #c4a484);
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-}
-
-/* PROFILE (تم ضبط الارتفاع) */
-.profile {
+  background: linear-gradient(135deg, #f3eee7, #e5d7c5);
   display: flex;
   justify-content: center;
-  margin-top: -55px;
+  padding: 30px 15px;
+}
+
+/* MAIN CARD */
+.container {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* PROFILE */
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .avatar {
-  width: 110px;
-  height: 110px;
-  background: #e9dfcf;
+  width: 90px;
+  height: 90px;
+  background: #e6d3b3;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 32px;
   font-weight: bold;
   color: #7a5c3e;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin: auto;
 }
 
-/* NAME */
-.name {
-  text-align: center;
+.profile h1 {
   margin-top: 12px;
+  font-size: 22px;
 }
 
-.name h1 {
-  font-size: 24px;
-}
-
-.name p {
+.profile p {
   font-size: 13px;
-  color: #7a6b5a;
+  color: #777;
 }
 
 /* BUTTONS */
-.buttons {
-  margin: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .btn {
-  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  margin: 10px 0;
   border-radius: 12px;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   font-weight: 500;
   transition: 0.3s;
-  font-size: 14px;
 }
 
 .email {
@@ -91,69 +82,68 @@ body {
   color: white;
 }
 
-.linkedin, .github {
-  background: #e9dfcf;
-  color: #2d2a26;
+.linkedin {
+  background: #f3eee7;
+  color: #333;
+}
+
+.github {
+  background: #f3eee7;
+  color: #333;
 }
 
 .btn:hover {
-  transform: scale(1.03);
+  transform: translateY(-2px);
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
-  margin: 22px;
+  margin-top: 20px;
 }
 
 .section h2 {
-  margin-bottom: 12px;
-  font-size: 18px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 /* CARDS */
 .card {
-  background: white;
-  padding: 13px;
+  background: #f9f7f3;
+  padding: 12px;
   border-radius: 12px;
-  margin-bottom: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  border-left: 4px solid #b89b72;
+  margin-bottom: 8px;
 }
 
 .card h3 {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .card p {
   font-size: 12px;
-  color: #666;
+  color: #777;
 }
 
 /* FOOTER */
 .footer {
   text-align: center;
-  padding: 18px;
   font-size: 11px;
-  color: #888;
+  margin-top: 15px;
+  color: #aaa;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<div class="header"></div>
+<div class="container">
 
-<div class="profile">
-  <div class="avatar">A</div>
-</div>
+  <div class="profile">
+    <div class="avatar">A</div>
+    <h1>Amna Bin Nashi</h1>
+    <p>Software Engineer | Front-End | UI/UX | AI/ML</p>
+  </div>
 
-<div class="name">
-  <h1>Amna Bin Nashi</h1>
-  <p>Software Engineer | Front-End | UI/UX | AI/ML</p>
-</div>
-
-<div class="buttons">
-
+  <!-- BUTTONS -->
   <a href="mailto:amnabinnashi2000@gmail.com" class="btn email">
     <i class="fa-solid fa-envelope"></i> Email
   </a>
@@ -166,45 +156,39 @@ body {
     <i class="fa-brands fa-github"></i> GitHub
   </a>
 
-</div>
+  <!-- EXPERIENCE -->
+  <div class="section">
+    <h2>Experience</h2>
 
-<div class="section">
-  <h2>Experience</h2>
+    <div class="card">
+      <h3>Product Designer & Developer</h3>
+      <p>Nexa Solutions (2026 - Present)</p>
+    </div>
 
-  <div class="card">
-    <h3>Product Designer & Developer</h3>
-    <p>Nexa Solutions (2026 - Present)</p>
+    <div class="card">
+      <h3>UI/UX Designer</h3>
+      <p>Freelance (2024 - 2026)</p>
+    </div>
+
+    <div class="card">
+      <h3>Graphic Designer & Social Media Manager</h3>
+      <p>Dhifaf Al-Nile Company (2024)</p>
+    </div>
   </div>
 
-  <div class="card">
-    <h3>UI/UX Designer</h3>
-    <p>Freelance (2024 - 2026)</p>
+  <!-- CERTIFICATIONS -->
+  <div class="section">
+    <h2>Certifications</h2>
+
+    <div class="card">AWS Cloud Practitioner Essentials</div>
+    <div class="card">AWS Cloud Essentials</div>
+    <div class="card">Datadog APM Metrics</div>
   </div>
 
-  <div class="card">
-    <h3>Graphic Designer & Social Media Manager</h3>
-    <p>Dhifaf Al-Nile Company (2024)</p>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Certifications</h2>
-
-  <div class="card">
-    <h3>AWS Cloud Practitioner Essentials</h3>
+  <div class="footer">
+    © 2026 Amna Bin Nashi
   </div>
 
-  <div class="card">
-    <h3>AWS Cloud Essentials</h3>
-  </div>
-
-  <div class="card">
-    <h3>Datadog APM Metrics & Traces</h3>
-  </div>
-</div>
-
-<div class="footer">
-  © 2026 Amna Bin Nashi
 </div>
 
 </body>
