@@ -5,174 +5,179 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amna Bin Nashi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Outfit',sans-serif;
 }
 
-body {
-  background: #f4f7f7;
-  padding: 40px;
+body{
+  background:#f7f6f3;
+  color:#1a1a1a;
 }
 
-/* MAIN GRID */
-.main {
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  gap: 25px;
-  max-width: 1100px;
-  margin: auto;
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#5fa3a5,#3f7f81);
+  padding:60px 20px 80px;
+  text-align:center;
+  color:#fff;
+  border-bottom-left-radius:40px;
+  border-bottom-right-radius:40px;
 }
 
-/* LEFT SIDE */
-.sidebar {
-  background: white;
-  border-radius: 25px;
-  padding: 25px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.avatar{
+  width:90px;
+  height:90px;
+  background:#fff;
+  color:#3f7f81;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:32px;
+  font-weight:700;
+  margin:0 auto 15px;
 }
 
-/* HEADER STYLE */
-.header {
-  height: 120px;
-  background: linear-gradient(135deg, #6faeb0, #4e8f91);
-  border-radius: 20px;
-  margin-bottom: -60px;
+.hero h1{
+  font-size:22px;
+  margin-bottom:5px;
 }
 
-/* AVATAR */
-.avatar {
-  width: 100px;
-  height: 100px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 35px;
-  font-weight: 600;
-  color: #4e8f91;
-  margin: auto;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* PROFILE TEXT */
-.sidebar h1 {
-  margin-top: 15px;
-  font-size: 20px;
-}
-
-.sidebar p {
-  font-size: 13px;
-  color: #777;
-  margin-bottom: 15px;
+.hero p{
+  font-size:13px;
+  opacity:0.9;
 }
 
 /* BUTTONS */
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px;
-  margin: 8px 0;
-  border-radius: 12px;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.2s;
+.actions{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
 }
 
-.email {
-  background: #4e8f91;
-  color: white;
+.btn{
+  padding:13px;
+  border-radius:12px;
+  text-decoration:none;
+  font-size:14px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  transition:0.3s;
 }
 
-.linkedin, .github {
-  background: #eef6f6;
-  color: #2c5d5f;
+.email{
+  background:#fff;
+  color:#3f7f81;
+  font-weight:600;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
+.link{
+  background:rgba(255,255,255,0.15);
+  color:#fff;
 }
 
-/* RIGHT SIDE */
-.content {
-  display: grid;
-  gap: 20px;
+.btn:hover{
+  transform:translateY(-3px);
 }
 
-/* SECTION */
-.section {
-  background: white;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+/* CONTENT */
+.content{
+  padding:25px 20px;
 }
 
-.section h2 {
-  margin-bottom: 15px;
-  font-size: 16px;
+/* SECTION TITLE */
+.title{
+  font-size:15px;
+  margin-bottom:15px;
+  font-weight:600;
+  color:#444;
 }
 
-/* GRID CARDS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
+/* TIMELINE */
+.timeline{
+  position:relative;
+  padding-left:20px;
 }
 
-/* CARD */
-.card {
-  background: #f7fbfb;
-  padding: 15px;
-  border-radius: 14px;
-  border-left: 4px solid #4e8f91;
-  transition: 0.2s;
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:5px;
+  top:0;
+  width:2px;
+  height:100%;
+  background:#d8d8d8;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  background: #eef6f6;
+.item{
+  margin-bottom:20px;
+  position:relative;
 }
 
-.card h3 {
-  font-size: 14px;
+.item::before{
+  content:"";
+  position:absolute;
+  left:-2px;
+  top:5px;
+  width:10px;
+  height:10px;
+  background:#3f7f81;
+  border-radius:50%;
 }
 
-.card p {
-  font-size: 12px;
-  color: #666;
-  margin-top: 4px;
+.item h3{
+  font-size:14px;
+  font-weight:600;
+}
+
+.item p{
+  font-size:12px;
+  color:#777;
+  margin-top:3px;
+}
+
+/* EDUCATION + CERT */
+.box{
+  background:#fff;
+  padding:15px;
+  border-radius:15px;
+  margin-bottom:15px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.box h3{
+  font-size:14px;
+}
+
+.box p{
+  font-size:12px;
+  color:#777;
+  margin-top:4px;
 }
 
 /* FOOTER */
-.footer {
-  text-align: center;
-  font-size: 12px;
-  margin-top: 20px;
-  color: #888;
+.footer{
+  text-align:center;
+  font-size:11px;
+  padding:15px;
+  color:#aaa;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-
-  .main {
-    grid-template-columns: 1fr;
-  }
-
-  .header {
-    height: 100px;
+/* DESKTOP */
+@media(min-width:768px){
+  .content{
+    max-width:800px;
+    margin:auto;
   }
 }
 </style>
@@ -181,96 +186,77 @@ body {
 
 <body>
 
-<div class="main">
+<!-- HERO -->
+<div class="hero">
+  <div class="avatar">A</div>
+  <h1>Amna Bin Nashi</h1>
+  <p>Software Engineer | Front-End | UI/UX | AI/ML</p>
 
-  <!-- LEFT -->
-  <div class="sidebar">
-
-    <div class="header"></div>
-    <div class="avatar">A</div>
-
-    <h1>Amna Bin Nashi</h1>
-    <p>Software Engineer | Front-End | UI/UX | AI/ML</p>
-
+  <div class="actions">
     <a href="mailto:amnabinnashi2000@gmail.com" class="btn email">
       <i class="fa-solid fa-envelope"></i> Email
     </a>
 
-    <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3" target="_blank" class="btn linkedin">
+    <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3" target="_blank" class="btn link">
       <i class="fa-brands fa-linkedin"></i> LinkedIn
     </a>
 
-    <a href="https://github.com/amnabinnashi" target="_blank" class="btn github">
+    <a href="https://github.com/amnabinnashi" target="_blank" class="btn link">
       <i class="fa-brands fa-github"></i> GitHub
     </a>
-
   </div>
+</div>
 
-  <!-- RIGHT -->
-  <div class="content">
+<!-- CONTENT -->
+<div class="content">
 
-    <!-- EXPERIENCE -->
-    <div class="section">
-      <h2>Experience</h2>
-      <div class="grid">
+  <!-- EXPERIENCE -->
+  <div class="title">Experience</div>
+  <div class="timeline">
 
-        <div class="card">
-          <h3>Product Designer & Developer</h3>
-          <p>Nexa Solutions • 2026 - Present</p>
-        </div>
-
-        <div class="card">
-          <h3>UI/UX Designer</h3>
-          <p>Freelance • 2024 - 2026</p>
-        </div>
-
-        <div class="card">
-          <h3>Graphic Designer & Social Media Manager</h3>
-          <p>Dhifaf Al-Nile • 2024</p>
-        </div>
-
-      </div>
+    <div class="item">
+      <h3>Product Designer & Developer</h3>
+      <p>Nexa Solutions • 2026 - Present</p>
     </div>
 
-    <!-- EDUCATION -->
-    <div class="section">
-      <h2>Education</h2>
-      <div class="grid">
-
-        <div class="card">
-          <h3>Bachelor of Computer Science</h3>
-          <p>Hadhramout University • 2019 - 2023</p>
-        </div>
-
-      </div>
+    <div class="item">
+      <h3>UI/UX Designer</h3>
+      <p>Freelance • 2024 - 2026</p>
     </div>
 
-    <!-- CERTIFICATIONS -->
-    <div class="section">
-      <h2>Certifications</h2>
-      <div class="grid">
-
-        <div class="card">
-          <h3>AWS Cloud Practitioner Essentials</h3>
-        </div>
-
-        <div class="card">
-          <h3>AWS Cloud Essentials</h3>
-        </div>
-
-        <div class="card">
-          <h3>Datadog APM Metrics</h3>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="footer">
-      © 2026 Amna Bin Nashi
+    <div class="item">
+      <h3>Graphic Designer & Social Media Manager</h3>
+      <p>Dhifaf Al-Nile • 2024</p>
     </div>
 
   </div>
 
+  <!-- EDUCATION -->
+  <div class="title">Education</div>
+  <div class="box">
+    <h3>Bachelor of Computer Science</h3>
+    <p>Hadhramout University • 2019 - 2023</p>
+  </div>
+
+  <!-- CERTIFICATIONS -->
+  <div class="title">Certifications</div>
+
+  <div class="box">
+    <h3>AWS Cloud Practitioner Essentials</h3>
+  </div>
+
+  <div class="box">
+    <h3>AWS Cloud Essentials</h3>
+  </div>
+
+  <div class="box">
+    <h3>Datadog APM Metrics</h3>
+  </div>
+
+</div>
+
+<div class="footer">
+© 2026 Amna Bin Nashi
 </div>
 
 </body>
