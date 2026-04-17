@@ -17,140 +17,151 @@
 }
 
 body{
-  background:#0f1c1d;
-  color:#fff;
+  background:#f3f4f2;
+  color:#1a1a1a;
 }
 
-/* NAV */
-.nav{
+/* LAYOUT */
+.wrapper{
   display:flex;
-  justify-content:space-between;
-  padding:20px 40px;
+  max-width:1200px;
+  margin:auto;
+  min-height:100vh;
 }
 
-.logo{
-  font-weight:700;
-  font-size:20px;
-}
-
-.menu{
-  display:flex;
-  gap:25px;
-}
-
-.menu a{
-  color:#aaa;
-  text-decoration:none;
-  font-size:14px;
-}
-
-.menu a:hover{
+/* SIDEBAR */
+.sidebar{
+  width:30%;
+  background:linear-gradient(135deg,#2f5f5f,#4c8a8a);
   color:#fff;
-}
-
-/* HERO */
-.hero{
+  padding:40px 25px;
   display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:80px 40px;
-  flex-wrap:wrap;
-}
-
-.hero-text{
-  max-width:500px;
-}
-
-.hero h1{
-  font-size:40px;
-  margin-bottom:10px;
-}
-
-.hero span{
-  color:#5fa3a5;
-}
-
-.hero p{
-  color:#aaa;
-  margin-bottom:20px;
-}
-
-.btn{
-  background:#5fa3a5;
-  padding:12px 20px;
-  border-radius:10px;
-  color:#fff;
-  text-decoration:none;
+  flex-direction:column;
+  justify-content:center;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:20px;
 }
 
 /* AVATAR */
 .avatar{
-  width:260px;
-  height:260px;
-  border-radius:30px;
-  background:linear-gradient(135deg,#5fa3a5,#3f7f81);
+  width:90px;
+  height:90px;
+  background:#ffffff;
+  color:#2f5f5f;
+  border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:80px;
+  font-size:32px;
   font-weight:700;
+  margin-bottom:15px;
 }
 
-/* SECTIONS */
-.section{
-  padding:60px 40px;
+/* TEXT */
+.sidebar h1{
+  font-size:22px;
 }
 
-.section h2{
-  margin-bottom:30px;
+.sidebar p{
+  font-size:13px;
+  opacity:0.9;
+  margin:10px 0 25px;
 }
 
-/* CARDS */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:#162626;
-  padding:20px;
-  border-radius:15px;
+/* BUTTONS */
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:12px;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:14px;
+  margin-bottom:10px;
   transition:0.3s;
 }
 
+.email{
+  background:#fff;
+  color:#2f5f5f;
+  font-weight:600;
+}
+
+.link{
+  background:rgba(255,255,255,0.15);
+  color:#fff;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+/* MAIN */
+.main{
+  width:70%;
+  padding:50px;
+}
+
+/* SECTION */
+.section{
+  margin-bottom:40px;
+}
+
+.section h2{
+  margin-bottom:15px;
+  font-size:18px;
+}
+
+/* CARDS */
+.card{
+  background:#ffffff;
+  padding:15px;
+  border-radius:12px;
+  margin-bottom:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+  transition:0.2s;
+}
+
 .card:hover{
-  transform:translateY(-5px);
-  background:#1e3333;
+  transform:translateY(-4px);
 }
 
 .card h3{
-  margin-bottom:8px;
+  font-size:15px;
 }
 
 .card p{
-  color:#aaa;
   font-size:13px;
-}
-
-/* CONTACT */
-.contact{
-  text-align:center;
-}
-
-.contact a{
-  display:block;
-  margin:10px 0;
-  color:#5fa3a5;
-  text-decoration:none;
+  color:#777;
+  margin-top:4px;
 }
 
 /* FOOTER */
 .footer{
   text-align:center;
-  padding:20px;
-  color:#777;
+  margin-top:30px;
   font-size:12px;
+  color:#999;
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .wrapper{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    border-radius:0;
+    text-align:center;
+    align-items:center;
+  }
+
+  .main{
+    width:100%;
+    padding:30px 20px;
+  }
 }
 </style>
 
@@ -158,85 +169,78 @@ body{
 
 <body>
 
-<!-- NAV -->
-<div class="nav">
-  <div class="logo">Amna.</div>
-  <div class="menu">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </div>
-</div>
+<div class="wrapper">
 
-<!-- HERO -->
-<div class="hero">
+  <!-- LEFT SIDE -->
+  <div class="sidebar">
 
-  <div class="hero-text">
-    <h1>Hello, I'm <span>Amna</span></h1>
-    <p>Frontend Developer passionate about building modern and user-friendly websites.</p>
+    <div class="avatar">A</div>
 
-    <a href="mailto:amnabinnashi2000@gmail.com" class="btn">
-      Contact Me
+    <h1>Amna Bin Nashi</h1>
+    <p>Software Engineer | Front-End | UI/UX | AI/ML</p>
+
+    <a href="mailto:amnabinnashi2000@gmail.com" class="btn email">
+      <i class="fa-solid fa-envelope"></i> Email
     </a>
+
+    <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3" target="_blank" class="btn link">
+      <i class="fa-brands fa-linkedin"></i> LinkedIn
+    </a>
+
+    <a href="https://github.com/amnabinnashi" target="_blank" class="btn link">
+      <i class="fa-brands fa-github"></i> GitHub
+    </a>
+
   </div>
 
-  <div class="avatar">
-    A
+  <!-- RIGHT SIDE -->
+  <div class="main">
+
+    <!-- EXPERIENCE -->
+    <div class="section">
+      <h2>Experience</h2>
+
+      <div class="card">
+        <h3>Product Designer & Developer</h3>
+        <p>Nexa Solutions • 2026 - Present</p>
+      </div>
+
+      <div class="card">
+        <h3>UI/UX Designer</h3>
+        <p>Freelance • 2024 - 2026</p>
+      </div>
+
+      <div class="card">
+        <h3>Graphic Designer & Social Media Manager</h3>
+        <p>Dhifaf Al-Nile • 2024</p>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <h2>Education</h2>
+
+      <div class="card">
+        <h3>Bachelor of Computer Science</h3>
+        <p>Hadhramout University • 2019 - 2023</p>
+      </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="section">
+      <h2>Certifications</h2>
+
+      <div class="card">AWS Cloud Practitioner Essentials</div>
+      <div class="card">AWS Cloud Essentials</div>
+      <div class="card">Datadog APM Metrics</div>
+    </div>
+
+    <div class="footer">
+      © 2026 Amna Bin Nashi — All Rights Reserved
+    </div>
+
   </div>
 
-</div>
-
-<!-- PROJECTS -->
-<div class="section">
-  <h2>Projects</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Project One</h3>
-      <p>Modern UI design project.</p>
-    </div>
-
-    <div class="card">
-      <h3>Project Two</h3>
-      <p>Responsive web application.</p>
-    </div>
-
-    <div class="card">
-      <h3>Project Three</h3>
-      <p>Creative portfolio design.</p>
-    </div>
-  </div>
-</div>
-
-<!-- EXPERIENCE -->
-<div class="section">
-  <h2>Experience</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Product Designer</h3>
-      <p>Nexa Solutions • 2026 - Present</p>
-    </div>
-
-    <div class="card">
-      <h3>UI/UX Designer</h3>
-      <p>Freelance • 2024 - 2026</p>
-    </div>
-  </div>
-</div>
-
-<!-- CONTACT -->
-<div class="section contact">
-  <h2>Contact</h2>
-
-  <a href="mailto:amnabinnashi2000@gmail.com">Email</a>
-  <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3">LinkedIn</a>
-  <a href="https://github.com/amnabinnashi">GitHub</a>
-</div>
-
-<div class="footer">
-© 2026 Amna Bin Nashi — All Rights Reserved
 </div>
 
 </body>
