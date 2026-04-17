@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amna Bin Nashi</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -13,50 +13,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #f3eee7, #e5d7c5);
+  background: #f4f7f7;
   display: flex;
   justify-content: center;
-  padding: 30px 15px;
+  padding: 20px;
 }
 
-/* MAIN */
+/* CONTAINER */
 .container {
-  background: white;
   width: 100%;
   max-width: 420px;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(135deg, #6faeb0, #4e8f91);
+  height: 140px;
 }
 
 /* PROFILE */
 .profile {
   text-align: center;
-  margin-bottom: 20px;
+  margin-top: -45px;
+  padding: 0 20px;
 }
 
 .avatar {
-  width: 85px;
-  height: 85px;
-  background: #e6d3b3;
+  width: 90px;
+  height: 90px;
+  background: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 600;
-  color: #7a5c3e;
+  color: #4e8f91;
   margin: auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .profile h1 {
   margin-top: 10px;
   font-size: 20px;
-  font-weight: 600;
 }
 
 .profile p {
@@ -71,79 +78,87 @@ body {
   justify-content: center;
   gap: 10px;
   padding: 13px;
-  margin: 10px 0;
-  border-radius: 10px;
+  margin: 10px 20px;
+  border-radius: 12px;
   text-decoration: none;
   font-size: 14px;
   transition: 0.2s;
 }
 
 .email {
-  background: #b89b72;
+  background: #4e8f91;
   color: white;
 }
 
-.linkedin, .github {
-  background: #f5f2ed;
-  color: #333;
+.linkedin {
+  background: #eef6f6;
+  color: #2c5d5f;
+}
+
+.github {
+  background: #eef6f6;
+  color: #2c5d5f;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* SECTION */
 .section {
-  margin-top: 22px;
+  padding: 15px 20px;
 }
 
 .section h2 {
   font-size: 15px;
   margin-bottom: 10px;
-  font-weight: 600;
+  color: #333;
 }
 
-/* 🔥 CLEAN CARDS */
+/* CARDS */
 .card {
-  background: #ffffff;
-  padding: 14px;
-  border-radius: 10px;
+  background: #f7fbfb;
+  padding: 15px;
+  border-radius: 14px;
   margin-bottom: 10px;
-  border: 1px solid #ece7df;
   transition: 0.2s;
+  border-left: 4px solid #4e8f91;
 }
-
 
 .card:hover {
-  background: #faf8f4;
+  transform: translateY(-3px);
+  background: #eef6f6;
 }
 
-/* النص */
 .card h3 {
   font-size: 14px;
-  font-weight: 600;
 }
 
 .card p {
   font-size: 12px;
-  color: #777;
-  margin-top: 3px;
+  color: #666;
+  margin-top: 4px;
 }
 
 /* FOOTER */
 .footer {
   text-align: center;
   font-size: 11px;
-  margin-top: 15px;
-  color: #aaa;
+  padding: 15px;
+  color: #999;
 }
 </style>
 
 </head>
+
 <body>
 
 <div class="container">
 
+  <!-- HEADER -->
+  <div class="header"></div>
+
+  <!-- PROFILE -->
   <div class="profile">
     <div class="avatar">A</div>
     <h1>Amna Bin Nashi</h1>
