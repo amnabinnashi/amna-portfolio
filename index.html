@@ -14,142 +14,217 @@
   padding:0;
   box-sizing:border-box;
   font-family:'Outfit',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
-  background:#f6f5f2;
-  color:#1a1a1a;
-}
-
-/* LAYOUT */
-.wrapper{
-  display:flex;
-  flex-direction:column;
-}
-
-/* LEFT SIDE (PROFILE) */
-.sidebar{
-  background:linear-gradient(135deg,#5fa3a5,#3f7f81);
+  background:#0b1414;
   color:#fff;
-  padding:40px 20px;
-  text-align:center;
 }
 
-.avatar{
-  width:90px;
-  height:90px;
-  background:#fff;
-  color:#3f7f81;
-  border-radius:50%;
+/* NAVBAR */
+.nav{
   display:flex;
+  justify-content:space-between;
   align-items:center;
-  justify-content:center;
-  font-size:32px;
-  font-weight:700;
-  margin:0 auto 15px;
+  padding:20px 60px;
+  position:fixed;
+  width:100%;
+  top:0;
+  z-index:1000;
+  background:rgba(0,0,0,0.3);
+  backdrop-filter:blur(12px);
 }
 
-.sidebar h1{
+.logo{
   font-size:22px;
+  font-weight:700;
+  color:#5fa3a5;
 }
 
-.sidebar p{
-  font-size:13px;
-  opacity:0.9;
-  margin-bottom:20px;
-}
-
-/* BUTTONS */
-.btn{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:12px;
-  border-radius:12px;
+.nav a{
+  margin-left:25px;
   text-decoration:none;
+  color:#ccc;
   font-size:14px;
-  margin-bottom:10px;
+  position:relative;
+}
+
+.nav a::after{
+  content:"";
+  position:absolute;
+  width:0%;
+  height:2px;
+  background:#5fa3a5;
+  bottom:-5px;
+  left:0;
   transition:0.3s;
 }
 
-.email{
-  background:#fff;
-  color:#3f7f81;
-  font-weight:600;
+.nav a:hover::after{
+  width:100%;
 }
 
-.link{
-  background:rgba(255,255,255,0.15);
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 60px;
+  background:radial-gradient(circle at top,#1f4444,#0b1414);
+}
+
+.hero-text{
+  max-width:550px;
+  animation:fadeUp 1s ease;
+}
+
+.hero-text h1{
+  font-size:55px;
+  line-height:1.2;
+}
+
+.hero-text span{
+  color:#5fa3a5;
+}
+
+.hero-text p{
+  color:#bbb;
+  margin:15px 0 25px;
+  font-size:15px;
+}
+
+.hero-btn{
+  background:linear-gradient(135deg,#5fa3a5,#3f7f81);
+  padding:14px 28px;
+  border-radius:12px;
+  text-decoration:none;
   color:#fff;
+  font-size:14px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+  transition:0.3s;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
-}
-
-/* RIGHT SIDE */
-.main{
-  padding:30px 20px;
-}
-
-/* SECTION */
-.section{
-  margin-bottom:30px;
-}
-
-.section h2{
-  font-size:16px;
-  margin-bottom:15px;
-}
-
-/* CARDS */
-.card{
-  background:#fff;
-  padding:15px;
-  border-radius:15px;
-  margin-bottom:10px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
-  transition:0.2s;
-}
-
-.card:hover{
+.hero-btn:hover{
   transform:translateY(-4px);
 }
 
+/* IMAGE */
+.hero-img{
+  width:320px;
+  height:320px;
+  border-radius:40px;
+  background:linear-gradient(135deg,#5fa3a5,#3f7f81);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:90px;
+  font-weight:700;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+  animation:float 4s ease-in-out infinite;
+}
+
+/* SECTIONS */
+.section{
+  padding:100px 60px;
+  text-align:center;
+}
+
+.section h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+
+.section p{
+  color:#aaa;
+}
+
+/* PROJECTS */
+.projects{
+  display:flex;
+  gap:25px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+
+.card{
+  width:280px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  padding:25px;
+  border-radius:20px;
+  text-align:left;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px) scale(1.02);
+  border-color:#5fa3a5;
+}
+
 .card h3{
-  font-size:14px;
+  margin-bottom:10px;
 }
 
-.card p{
-  font-size:12px;
+/* CONTACT */
+.contact a{
+  display:block;
+  margin:12px auto;
+  width:260px;
+  padding:13px;
+  border-radius:12px;
+  text-decoration:none;
+  color:#fff;
+  background:rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+
+.contact a:hover{
+  background:#5fa3a5;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:25px;
   color:#777;
-  margin-top:4px;
+  font-size:12px;
 }
 
-/* DESKTOP 🔥 */
-@media(min-width:900px){
+/* ANIMATION */
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
 
-  .wrapper{
-    flex-direction:row;
-    min-height:100vh;
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
   }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
 
-  .sidebar{
-    width:35%;
-    position:sticky;
-    top:0;
-    height:100vh;
-    display:flex;
+/* MOBILE */
+@media(max-width:768px){
+  .hero{
     flex-direction:column;
-    justify-content:center;
+    text-align:center;
   }
 
-  .main{
-    width:65%;
-    padding:60px;
+  .hero-img{
+    margin-top:40px;
   }
 
+  .nav{
+    padding:15px 20px;
+  }
 }
 </style>
 
@@ -157,76 +232,76 @@ body{
 
 <body>
 
-<div class="wrapper">
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">Amna.</div>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
-  <!-- LEFT -->
-  <div class="sidebar">
-    <div class="avatar">A</div>
-    <h1>Amna Bin Nashi</h1>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>Hello, I’m <span>Amna</span></h1>
     <p>Software Engineer | Front-End | UI/UX | AI/ML</p>
 
-    <a href="mailto:amnabinnashi2000@gmail.com" class="btn email">
-      <i class="fa-solid fa-envelope"></i> Email
-    </a>
-
-    <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3" target="_blank" class="btn link">
-      <i class="fa-brands fa-linkedin"></i> LinkedIn
-    </a>
-
-    <a href="https://github.com/amnabinnashi" target="_blank" class="btn link">
-      <i class="fa-brands fa-github"></i> GitHub
-    </a>
+    <a href="#projects" class="hero-btn">View My Work</a>
   </div>
 
-  <!-- RIGHT -->
-  <div class="main">
+  <div class="hero-img">A</div>
+</div>
 
-    <div class="section">
-      <h2>Experience</h2>
+<!-- ABOUT -->
+<div class="section" id="about">
+  <h2>About Me</h2>
+  <p>I create modern, clean, and high-quality digital experiences with a focus on performance and design.</p>
+</div>
 
-      <div class="card">
-        <h3>Product Designer & Developer</h3>
-        <p>Nexa Solutions • 2026 - Present</p>
-      </div>
+<!-- PROJECTS -->
+<div class="section" id="projects">
+  <h2>Projects</h2>
 
-      <div class="card">
-        <h3>UI/UX Designer</h3>
-        <p>Freelance • 2024 - 2026</p>
-      </div>
-
-      <div class="card">
-        <h3>Graphic Designer & Social Media Manager</h3>
-        <p>Dhifaf Al-Nile • 2024</p>
-      </div>
+  <div class="projects">
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Responsive and modern personal website.</p>
     </div>
 
-    <div class="section">
-      <h2>Education</h2>
-
-      <div class="card">
-        <h3>Bachelor of Computer Science</h3>
-        <p>Hadhramout University • 2019 - 2023</p>
-      </div>
+    <div class="card">
+      <h3>UI/UX System</h3>
+      <p>Design system for scalable products.</p>
     </div>
 
-    <div class="section">
-      <h2>Certifications</h2>
-
-      <div class="card">
-        <h3>AWS Cloud Practitioner Essentials</h3>
-      </div>
-
-      <div class="card">
-        <h3>AWS Cloud Essentials</h3>
-      </div>
-
-      <div class="card">
-        <h3>Datadog APM Metrics</h3>
-      </div>
+    <div class="card">
+      <h3>AI Model</h3>
+      <p>Machine learning based solution.</p>
     </div>
-
   </div>
+</div>
 
+<!-- CONTACT -->
+<div class="section contact" id="contact">
+  <h2>Contact</h2>
+
+  <a href="mailto:amnabinnashi2000@gmail.com">
+    <i class="fa-solid fa-envelope"></i> Email
+  </a>
+
+  <a href="https://www.linkedin.com/in/amna-bin-nashi-958a563a3" target="_blank">
+    <i class="fa-brands fa-linkedin"></i> LinkedIn
+  </a>
+
+  <a href="https://github.com/amnabinnashi" target="_blank">
+    <i class="fa-brands fa-github"></i> GitHub
+  </a>
+</div>
+
+<div class="footer">
+© 2026 Amna Bin Nashi
 </div>
 
 </body>
